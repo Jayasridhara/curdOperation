@@ -111,8 +111,8 @@
         .btn-edit {
             background-color: #f59e0b; /* Amber for Edit */
             color: #ffffff;
-            padding: 6px 10px; /* Adjusted padding for icons */
-            font-size: 0.95rem; /* Increased from 0.875rem */
+            padding: 8px 12px; /* Adjusted padding for larger icon */
+            font-size: 1.2rem; /* Increased icon size */
             border-radius: 6px;
         }
         .btn-edit:hover {
@@ -121,8 +121,8 @@
         .btn-delete {
             background-color: #ef4444; /* Red for Delete */
             color: #ffffff;
-            padding: 6px 10px; /* Adjusted padding for icons */
-            font-size: 0.95rem; /* Increased from 0.875rem */
+            padding: 8px 12px; /* Adjusted padding for larger icon */
+            font-size: 1.2rem; /* Increased icon size */
             border-radius: 6px;
         }
         .btn-delete:hover {
@@ -368,8 +368,10 @@
             .filter-label {
                 font-size: 0.9rem;
             }
+            /* Adjusted for mobile: make buttons slightly smaller than desktop, but still larger than previous mobile size */
             .btn-edit, .btn-delete {
-                font-size: 0.85rem;
+                font-size: 1rem; /* Slightly larger for mobile now */
+                padding: 6px 10px;
             }
             .btn-clear-history {
                 font-size: 0.9rem;
@@ -552,7 +554,7 @@
         const confirmDeleteYesBtn = document.getElementById('confirm-delete-yes');
         const confirmDeleteNoBtn = document.getElementById('confirm-delete-no');
 
-        // New: Clear History Confirmation Overlay elements
+        // Clear History Confirmation Overlay elements
         const clearHistoryConfirmationOverlay = document.getElementById('clear-history-confirmation-overlay');
         const confirmClearHistoryYesBtn = document.getElementById('confirm-clear-history-yes');
         const confirmClearHistoryNoBtn = document.getElementById('confirm-clear-history-no');
@@ -600,8 +602,8 @@
                 <p class="description">${transaction.description}</p>
                 <span class="amount-display">${sign}${formatCurrency(Math.abs(transaction.amount))}</span>
                 <div class="transaction-actions">
-                    <button class="edit-btn" onclick="editTransaction(${transaction.id})"><i class="fas fa-edit"></i></button>
-                    <button class="delete-btn" onclick="showDeleteConfirmation(${transaction.id})"><i class="fas fa-trash-alt"></i></button>
+                    <button class="btn-edit" onclick="editTransaction(${transaction.id})"><i class="fas fa-edit"></i></button>
+                    <button class="btn-delete" onclick="showDeleteConfirmation(${transaction.id})"><i class="fas fa-trash-alt"></i></button>
                 </div>
             `;
 
@@ -810,7 +812,7 @@
         function init() {
             form.addEventListener('submit', addOrUpdateTransaction);
             resetFormBtn.addEventListener('click', resetFormFields);
-            clearHistoryBtn.addEventListener('click', showClearHistoryConfirmation); // Call new confirmation function
+            clearHistoryBtn.addEventListener('click', showClearHistoryConfirmation);
 
             filterRadios.forEach(radio => {
                 radio.addEventListener('change', displayTransactions);
@@ -820,7 +822,7 @@
             confirmDeleteYesBtn.addEventListener('click', confirmDeleteYes);
             confirmDeleteNoBtn.addEventListener('click', confirmDeleteNo);
 
-            // New: Event listeners for clear history confirmation buttons
+            // Event listeners for clear history confirmation buttons
             confirmClearHistoryYesBtn.addEventListener('click', confirmClearHistoryYes);
             confirmClearHistoryNoBtn.addEventListener('click', confirmClearHistoryNo);
 
