@@ -1,0 +1,28 @@
+# Income Expense Calculator
+
+## Features
+- Add, edit, and delete income/expense entries
+- Filter by income/expense
+- Shows total income, total expense, and net balance
+- Data persists using localStorage
+
+## CURD Features
+🎯 Create
+On submit, add new entry to list and save to localStorage.
+
+📖 Read
+On page load, fetch and display all saved entries.
+
+✏️ Update
+Clicking "Edit" should fill the form with existing data and allow updating.
+
+❌ Delete
+Remove the entry and update display + localStorage.
+
+🔍 Filters
+Show All, Income, or Expense entries based on selected radio button.
+
+## Technologies
+- HTML
+- CSS / TailwindCSS
+- JavaScript
