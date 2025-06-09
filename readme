@@ -1,10 +1,14 @@
 # Income Expense Calculator
-
+A simple web application to manage your personal finances. You can track income and expenses, view your net balance, and filter transactions — all with localStorage support to persist data across sessions.
 ## Features
-- Add, edit, and delete income/expense entries
-- Filter by income/expense
-- Shows total income, total expense, and net balance
-- Data persists using localStorage
+- ✅ Add new income or expense entries
+- 📝 Edit existing entries
+- ❌ Delete entries
+- 🔍 Filter entries by type: **All**, **Income**, **Expense**
+- 📊 View total income, total expenses, and net balance
+- 💾 Data is saved in **localStorage**
+- 🔄 Reset button to clear form fields
+- 📱 Fully responsive layout (desktop + mobile)
 
 ## CURD Features
 🎯 Create
