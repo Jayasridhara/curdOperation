@@ -76,8 +76,8 @@
                 <p class="description">${transaction.description}</p>
                 <span class="amount-display">${sign}${formatCurrency(Math.abs(transaction.amount))}</span>
                 <div class="transaction-actions">
-                    <button class="edit-btn" onclick="editTransaction(${transaction.id})"><i class="fas fa-edit"></i></button>
-                    <button class="delete-btn" onclick="showDeleteConfirmation(${transaction.id})"><i class="fas fa-trash-alt"></i></button>
+                    <button class="btn-edit" onclick="editTransaction(${transaction.id})"><i class="fas fa-edit"></i></button>
+                    <button class="btn-delete" onclick="showDeleteConfirmation(${transaction.id})"><i class="fas fa-trash-alt"></i></button>
                 </div>
             `;
 
